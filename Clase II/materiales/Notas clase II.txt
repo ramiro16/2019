@@ -1,0 +1,7 @@
+float result;
+int n1,n2;
+
+result = (float) n1/n2; <----- casteo - si una division es entre 2 ENTEROS, por mas que la variable resultado sea flotante el resultado sera si o si ENTERO, perdiendo precision, para evitar eso se realiza el casteo. El casteo hace que una de las variables sea MOMENTANEAMETE un flotante, para no perder precision.
+
+
+
