@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1555456035 source:c:\users\rama\desktop\abm estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+
