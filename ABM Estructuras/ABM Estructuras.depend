@@ -5,3 +5,18 @@
 	<ctype.h>
 	<conio.h>
 
+1555516277 source:c:\users\alumno\desktop\abm estructuras\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"empleado.h"
+
+1555525110 source:c:\users\alumno\desktop\abm estructuras\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	"empleado.h"
+
+1555525110 c:\users\alumno\desktop\abm estructuras\empleado.h
+
