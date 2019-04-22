@@ -23,7 +23,8 @@ int menu()
     printf("3- Modificacion Empleado\n");
     printf("4- Ordenar Empleados\n");
     printf("5- Listar Empleados\n");
-    printf("6- Salir\n\n");
+    printf("6- Listar Sectores(1 o mas empleados)\n");
+    printf("7- Salir\n\n");
     printf("Ingrese opcion: ");
     scanf("%d", &opcion);
 
@@ -40,7 +41,7 @@ void mostrarEmpleados(eEmpleado vec[], int tam){
     int contador = 0;
     int i;
 
-    printf(" Legajo   Nombre  Sexo  Sueldo   Fecha de Nac.\n\n");
+    printf("Legajo   Nombre  Sexo  Sueldo   Fecha de Nac.\n\n");
     for(i=0; i < tam; i++){
         if(vec[i].ocupado == 1){
             mostrarEmpleado(vec[i]);

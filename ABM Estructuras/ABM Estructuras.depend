@@ -1,9 +1,10 @@
 # depslib dependency file v1.0
-1555456035 source:c:\users\rama\desktop\abm estructuras\main.c
+1555875044 source:c:\users\rama\desktop\abm estructuras\main.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
 	<conio.h>
+	"empleado.h"
 
 1555516277 source:c:\users\alumno\desktop\abm estructuras\empleado.c
 	<stdio.h>
@@ -19,4 +20,12 @@
 	"empleado.h"
 
 1555525110 c:\users\alumno\desktop\abm estructuras\empleado.h
+
+1555890317 source:c:\users\rama\desktop\abm estructuras\empleado.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"empleado.h"
+
+1555874681 c:\users\rama\desktop\abm estructuras\empleado.h
 

@@ -21,6 +21,7 @@ typedef struct
     float sueldo;
     int ocupado;
     eFecha fechaNac;
+    int idSector;
 
 } eEmpleado;
 
