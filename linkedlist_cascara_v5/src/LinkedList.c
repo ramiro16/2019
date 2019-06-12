@@ -98,7 +98,47 @@ Node* test_getNode(LinkedList* this, int nodeIndex)
  */
 static int addNode(LinkedList* this, int nodeIndex,void* pElement)
 {
-    int returnAux = -1;
+int returnAux = -1;
+
+    Node* prev;
+    Node* next;
+    Node* nuevoNodo;
+
+    if( this != NULL)
+    {
+        if(nodeIndex >= 0 && nodeIndex <= ll_len(this))
+        {
+            nuevoNodo = (Node*)malloc(sizeof(Node));
+            if(nuevoNodo != NULL)
+            {
+                nuevoNodo->pElement = pElement;
+                nuevoNodo->pNextNode = NULL;
+
+                if(nodeIndex == 0)
+                {
+                    nuevoNodo->pNextNode = this->pFirstNode;
+                    this->pFirstNode = nuevoNodo;
+                }
+                else
+                {
+                    prev = this->pFirstNode;
+                    next = prev->pNextNode;
+
+                    while( nodeIndex > 1)
+                    {
+                        prev  = next;
+                        next  = prev->pNextNode;
+                        nodeIndex--;
+                    }
+
+                    prev->pNextNode = nuevoNodo;
+                    nuevoNodo->pNextNode = next;
+                }
+                this->size++;
+                returnAux = 0;
+            }
+        }
+    }
 
     return returnAux;
 }
@@ -129,8 +169,52 @@ int test_addNode(LinkedList* this, int nodeIndex,void* pElement)
 int ll_add(LinkedList* this, void* pElement)
 {
     int returnAux = -1;
+    Node* nuevoNodo;
+    Node* prev;
+
+    if(this != NULL)
+    {
+        nuevoNodo = (Node*) malloc(sizeof(Node));
+
+        if(nuevoNodo != NULL)
+        {
+            prev = getNode(this,ll_len(this-1));
+
+            if(prev != NULL)
+            {
+                prev->pNextNode = nuevoNodo->pElement;
+                nuevoNodo->pNextNode = NULL;
+            }
+        }
+
+        this->size++;
+        returnAux = 0;
+    }
 
     return returnAux;
+
+    /*
+    int returnAux = -1;
+    Node* nuevoNodo;
+    Node* prev;
+
+    if(this != NULL)
+    {
+        nuevoNodo = (Node*)malloc(sizeof(Node));
+
+        if(nuevoNodo != NULL)
+        {
+            nuevoNodo->pElement = pElement;
+            nuevoNodo->pNextNode = NULL;
+        }
+
+        this->size++;
+        returnAux = 0;
+    }
+
+    return returnAux;*/
+
+
 }
 
 /** \brief Permite realizar el test de la funcion addNode la cual es privada
